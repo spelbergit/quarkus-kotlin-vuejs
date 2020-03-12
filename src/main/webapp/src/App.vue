@@ -2,16 +2,19 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <SystemProperties/> 
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import SystemProperties from "./components/SystemProperties";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    SystemProperties
   }
 }
 </script>
