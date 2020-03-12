@@ -1,4 +1,11 @@
-# rest-kotlin-quickstart project
+# Modified version of rest-kotlin-quickstart project with Vue.js added
+
+Combination of Quarkus, Kotlin and Vue.js in a single Maven project without modules.
+
+See also [DEVELOPMENT.md](DEVELOPMENT.md)
+
+
+# rest-kotlin-quickstart project with Vue.js added
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 

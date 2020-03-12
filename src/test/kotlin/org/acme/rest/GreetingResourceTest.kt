@@ -14,7 +14,7 @@ open class GreetingResourceTest {
           .`when`().get("/greeting")
           .then()
              .statusCode(200)
-             .body(`is`("hello"))
+             .body(`is`("Hello World!"))
     }
 
 }

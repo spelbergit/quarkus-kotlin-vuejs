@@ -5,6 +5,5 @@ module.exports = {
         proxy: 'http://localhost:8080'
     },
     outputDir: "../resources/META-INF/resources",
-    filenameHashing: false,
     productionSourceMap: false
 };

@@ -17,7 +17,8 @@ Run Quarkus
 
 Run NPM
 
-    npm serve
+    cd src/main/webapp
+    npm run serve
     
 # Release
 
