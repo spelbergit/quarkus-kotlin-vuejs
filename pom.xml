@@ -18,6 +18,7 @@
     <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
     <quarkus.platform.version>1.2.1.Final</quarkus.platform.version>
     <surefire-plugin.version>2.22.1</surefire-plugin.version>
+    <axon.version>4.3</axon.version>
   </properties>
   <dependencyManagement>
     <dependencies>
@@ -56,6 +57,82 @@
     <dependency>
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-resteasy-jsonb</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-core-deployment</artifactId>
+      <version>${quarkus.platform.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.quarkus</groupId>
+      <artifactId>quarkus-arc-deployment</artifactId>
+      <version>${quarkus.platform.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.quarkus.arc</groupId>
+      <artifactId>arc</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.axonframework</groupId>
+      <artifactId>axon-configuration</artifactId>
+      <version>${axon.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.axonframework</groupId>
+      <artifactId>axon-server-connector</artifactId>
+      <version>${axon.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.axonframework</groupId>
+      <artifactId>axon-eventsourcing</artifactId>
+      <version>${axon.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.axonframework</groupId>
+      <artifactId>axon-modelling</artifactId>
+      <version>${axon.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.axonframework</groupId>
+      <artifactId>axon-messaging</artifactId>
+      <version>${axon.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>feaster83</groupId>
+      <artifactId>quarkus-axonframework-runtime</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.axonframework</groupId>
+      <artifactId>axon-eventsourcing</artifactId>
+      <version>${axon.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.axonframework</groupId>
+      <artifactId>axon-messaging</artifactId>
+      <version>${axon.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.axonframework</groupId>
+      <artifactId>axon-modelling</artifactId>
+      <version>${axon.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.axonframework</groupId>
+      <artifactId>axon-server-connector</artifactId>
+      <version>${axon.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>feaster83</groupId>
+      <artifactId>quarkus-axonframework-deployment</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>feaster83</groupId>
+      <artifactId>quarkus-axonframework-runtime</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
     </dependency>
   </dependencies>
   <build>
@@ -104,30 +181,6 @@
           </execution>
         </executions>
       </plugin>
-<!--
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-resources-plugin</artifactId>
-        <version>3.1.0</version>
-        <executions>
-          <execution>
-            <id>webapp-resources</id>
-            <goals>
-              <goal>copy-resources</goal>
-            </goals>
-            <phase>process-sources</phase>
-            <configuration>
-              <outputDirectory>src/main/resources/META-INF/resources</outputDirectory>
-              <resources>
-                <resource>
-                  <directory>src/main/webapp/dist</directory>
-                </resource>
-              </resources>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
--->
       <plugin>
         <groupId>io.quarkus</groupId>
         <artifactId>quarkus-maven-plugin</artifactId>

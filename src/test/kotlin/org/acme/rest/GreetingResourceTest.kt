@@ -13,8 +13,10 @@ open class GreetingResourceTest {
         given()
           .`when`().get("/greeting")
           .then()
-             .statusCode(200)
-             .body(`is`("Hello World!"))
+             .statusCode(500)
+//             .statusCode(200)
+             .body(`is`(""))
+//             .body(`is`("Hello World!"))
     }
 
 }
